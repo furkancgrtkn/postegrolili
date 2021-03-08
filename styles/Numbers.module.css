@@ -1,0 +1,239 @@
+@keyframes rotateCircle {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.numbersContainer {
+  margin: auto;
+  margin-top: 90px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 100px 0;
+  width: 1300px;
+}
+
+.circleWrapper {
+  width: 665px;
+  height: 665px;
+  position: relative;
+  display: inline-block;
+  border: 15px solid #fff;
+  box-shadow: 0 0 15px rgb(0 0 0 / 10%);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circleWrapper::before {
+  border-radius: 50%;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(90deg, #8e2de2 0%, #4a00e0 100%);
+  opacity: 0.8;
+  z-index: 2;
+}
+
+.circleImg {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.circleWrapper svg {
+  position: absolute;
+  color: white;
+  z-index: 3;
+  width: 90px;
+  height: 90px;
+  border: 5px solid white;
+  border-radius: 50%;
+  padding: 10px;
+  padding-right: 5px;
+  cursor: pointer;
+}
+
+.circleWrapper span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 1000px;
+  animation: rotateCircle 10s linear 0s infinite both;
+  z-index: 2;
+}
+
+.circleWrapper span::before {
+  content: "";
+  position: absolute;
+  left: -12px;
+  top: 50%;
+  height: 10px;
+  width: 10px;
+  background: #5809e0;
+  border-radius: 100px;
+}
+.circleWrapper span::after {
+  content: "";
+  position: absolute;
+  left: auto;
+  right: -12px;
+  top: 50%;
+  height: 10px;
+  width: 10px;
+  background: #5809e0;
+  border-radius: 100px;
+}
+
+.numberBoxes {
+  display: flex;
+  flex-wrap: wrap;
+  width: 570px;
+  height: 630px;
+  justify-content: space-between;
+}
+
+.numberBoxes .numberBox {
+  margin-bottom: 20px;
+}
+
+.numberBoxes .numberBox:nth-child(2) {
+  margin-top: 50px;
+}
+
+.numberBoxes .numberBox:nth-child(3) {
+  margin-top: -50px;
+}
+
+.numberBox {
+  width: 270px;
+  height: 297px;
+  border: 10px solid #ffffff;
+  box-shadow: 0 0 15px rgb(0 0 0 / 10%);
+  background: #f5f9fb;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.numberBox svg {
+  width: 70px;
+  height: 70px;
+  color: #5809e0;
+  margin-bottom: 20px;
+}
+
+.numberText {
+  color: #5809e0;
+  font-weight: 700;
+  font-size: 36px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.numberTitle {
+  color: #3c424f;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.ytModal iframe {
+  width: 840px;
+  height: 472px;
+}
+
+@media only screen and (max-width: 1350px) {
+  .numbersContainer {
+    width: 1000px;
+  }
+  .circleWrapper {
+    width: 500px;
+    height: 500px;
+  }
+
+  /* .circleWrapper svg {
+    width: 60px;
+    height: 60px;
+  } */
+
+  .numberBoxes {
+    width: 430px;
+    height: 530px;
+  }
+
+  .numberBox {
+    width: 200px;
+    height: 250px;
+    text-align: center;
+  }
+  .numberText {
+    font-size: 26px;
+  }
+
+  .numberTitle {
+    font-size: 17px;
+  }
+}
+
+@media only screen and (max-width: 1050px) {
+  .numbersContainer {
+    flex-direction: column;
+    width: 90%;
+  }
+
+  .numberBoxes {
+    margin-top: 50px;
+  }
+}
+
+@media only screen and (max-width: 882px) {
+  .ytModal iframe {
+    width: 420px;
+    height: 236px;
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  .ytModal iframe {
+    width: 315px;
+    height: 177px;
+  }
+}
+
+@media only screen and (max-width: 530px) {
+  .circleWrapper {
+    width: 400px;
+    height: 400px;
+  }
+  .numberBoxes {
+    width: 250px;
+    height: 1060px;
+  }
+
+  .numberBox {
+    margin: auto !important;
+    margin-bottom: 20px;
+  }
+}
+
+@media only screen and (max-width: 410px) {
+  .circleWrapper {
+    width: 250px;
+    height: 250px;
+  }
+}

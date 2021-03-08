@@ -1,0 +1,243 @@
+.rightWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 690px;
+  height: 690px;
+}
+
+@keyframes autoAnimated {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  20% {
+    transform: translateX(15px) translateY(0);
+  }
+  40% {
+    transform: translateX(15px) translateY(15px);
+  }
+  60% {
+    transform: translateX(0) translateY(15px);
+  }
+  80% {
+    transform: translateX(-15px) translateY(0);
+  }
+  100% {
+    transform: translateX(0) translateY(0);
+  }
+}
+
+.rightImg {
+  position: relative;
+  width: 345px;
+  height: 651px;
+  animation: autoAnimated 10s linear 0s infinite both;
+}
+
+.circles {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  height: 340px;
+  width: 340px;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  border-radius: 1000px;
+  opacity: 0.75;
+}
+
+.circles span {
+  border-radius: 1000px;
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -50%;
+  margin-top: -50%;
+  height: 100%;
+  width: 100%;
+}
+
+@keyframes growShrink1 {
+  0% {
+    transform: scale(0);
+    opacity: 0.8;
+  }
+  30% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  90% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+
+@keyframes growShrink2 {
+  0% {
+    transform: scale(0);
+    opacity: 0.8;
+  }
+  30% {
+    transform: scale(1.5);
+    opacity: 0.5;
+  }
+  90% {
+    transform: scale(1.5);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+
+@keyframes growShrink3 {
+  0% {
+    transform: scale(0);
+    opacity: 0.8;
+  }
+  30% {
+    transform: scale(2);
+    opacity: 0.5;
+  }
+  90% {
+    transform: scale(2);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+
+.circles span:nth-child(1) {
+  z-index: 3;
+  background: linear-gradient(270deg, #8e2de2 0%, #4a00e0 100%);
+  animation: growShrink1 5s ease-in-out 0s infinite both;
+}
+
+.circles span:nth-child(2) {
+  z-index: 2;
+  background: linear-gradient(90deg, #8e2de2 0%, #4a00e0 100%);
+  animation: growShrink2 5s ease-in-out 0.2s infinite both;
+}
+
+.circles span:nth-child(3) {
+  z-index: 1;
+  background: linear-gradient(270deg, #8e2de2 0%, #4a00e0 100%);
+  animation: growShrink3 5s ease-in-out 0.4s infinite both;
+}
+
+.featuresContainer {
+  padding: 70px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.featuresContainer h1 {
+  font-size: 36px;
+  font-weight: 500;
+  color: #3c424f;
+  margin: 0;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.featuresSvg {
+  margin: auto;
+  margin-bottom: 60px;
+  display: flex;
+  align-items: center;
+}
+
+.featuresSvg svg {
+  width: 30px;
+  height: 30px;
+  color: #5809e0;
+}
+
+.featuresSvg svg:nth-child(3) {
+  width: 20px;
+  height: 20px;
+  transform: rotate(45deg);
+  margin: 0 10px;
+}
+
+.featuresBottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1300px;
+  margin: auto;
+}
+
+.featuresBottom li {
+  font-size: 24px;
+  color: #3c424f;
+  font-weight: 500;
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 15px;
+  height: 70px;
+  position: relative;
+}
+
+.svgContainer {
+  border-radius: 30px 0 30px 30px;
+  width: 70px;
+  height: 70px;
+  padding: 10px;
+  position: absolute;
+  left: -10px;
+  top: -8px;
+  background-color: #5809e0;
+  opacity: 0.08;
+  transform-origin: 50% 0;
+  transition: all 0.4s ease-in-out;
+}
+
+.featuresBottom li svg {
+  color: #5809e0;
+  width: 50px;
+  height: 50px;
+  margin-right: 30px;
+}
+
+.featuresBottom li:hover .svgContainer {
+  transform: rotate(35deg);
+}
+
+@media only screen and (max-width: 1345px) {
+  .featuresBottom {
+    flex-direction: column;
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .rightWrapper {
+    margin-top: 50px;
+    width: 290px;
+    height: 290px;
+  }
+
+  .circles {
+    height: 150px;
+    width: 150px;
+  }
+  .rightImg {
+    width: 150px;
+    height: 275px;
+  }
+
+  .featuresBottom li {
+    font-size: 17px;
+  }
+}
