@@ -106,19 +106,19 @@ export default function Footer({ text }) {
         </p>
         <ul>
           <li>
-            <Link href="/">
+            <Link href="https://www.instagram.com/postegrolili_/">
               <a>
                 <TiSocialInstagram />
               </a>
             </Link>
           </li>
-          <li>
+          {/* <li>
             <Link href="/">
               <a>
                 <TiSocialYoutubeCircular style={{ paddingRight: "2px" }} />
               </a>
             </Link>
-          </li>
+          </li> */}
         </ul>
       </div>
     </div>
