@@ -3,7 +3,6 @@ import Image from "next/image";
 import { DiAndroid } from "react-icons/di";
 import { IoIosArrowForward } from "react-icons/io";
 import { TiSocialInstagram } from "react-icons/ti";
-import { TiSocialYoutubeCircular } from "react-icons/ti";
 
 import Link from "next/link";
 import { Modal } from "semantic-ui-react";

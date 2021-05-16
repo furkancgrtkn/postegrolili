@@ -13,12 +13,6 @@ import { BiFullscreen } from "react-icons/bi";
 export default function AdvanceFeatures({ text }) {
   const [className1, setClassName1] = useState(true);
   const [className2, setClassName2] = useState(false);
-  // useEffect(() => {
-  //   setInterval(() => {
-  //     setClassName1(!className1);
-  //     setClassName2(!className2);
-  //   }, 5000);
-  // });
 
   return (
     <div className={styles.featuresContainer}>

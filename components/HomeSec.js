@@ -12,7 +12,7 @@ export default function HomeSec({ text }) {
         <div className={styles.homeLeft}>
           <h1>{text.homeTitle}</h1>
           <div className={styles.homeLeftBtns}>
-            <Link href="https://play.google.com/store/apps/details?id=com.folpostegro&hl=en">
+            <Link href="/">
               <a>
                 <span>
                   <DiAndroid />
