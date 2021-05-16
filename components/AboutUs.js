@@ -35,7 +35,7 @@ export default function AboutUs({ text }) {
               ))}
             </ul>
             <div className={styles.aboutDownBtn}>
-              <Link href="https://play.google.com/store/apps/details?id=com.folpostegro&hl=en">
+              <Link href="/">
                 <a>
                   <span>{text.aboutButton}</span>
                 </a>
